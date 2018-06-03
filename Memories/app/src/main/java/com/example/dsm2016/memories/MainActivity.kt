@@ -2,6 +2,7 @@ package com.example.dsm2016.memories
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.app.AlertDialog
 import android.support.v7.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -18,6 +19,12 @@ class MainActivity : AppCompatActivity() {
         }
 
         friendRecyclerView.layoutManager = LinearLayoutManager(this)
-        friendRecyclerView.adapter = FriendAdapter(friends)
+        friendRecyclerView.adapter = FriendAdapter(friends, applicationContext)
+
+        addFriendBtn.setOnClickListener {
+            val builder = AlertDialog.Builder(this)
+            val dialog = builder.create()
+            dialog.show();
+        }
     }
 }
