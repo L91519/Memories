@@ -1,13 +1,14 @@
-package com.example.dsm2016.memories
+package com.example.dsm2016.memories.adapter
 
 import android.content.Context
 import android.content.Intent
-import android.support.v7.app.AlertDialog
-import android.support.v7.widget.AlertDialogLayout
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.view.View
+import com.example.dsm2016.memories.activity.MemoryActivity
+import com.example.dsm2016.memories.R
+import com.example.dsm2016.memories.model.Friend
 import kotlinx.android.synthetic.main.item_friends.view.*
 
 class FriendAdapter(val items: ArrayList<Friend>, val context: Context): RecyclerView.Adapter<MainViewHolder>(){
@@ -29,11 +30,6 @@ class FriendAdapter(val items: ArrayList<Friend>, val context: Context): Recycle
         holder.itemView.setOnClickListener{
             val nextIntent = Intent(context, MemoryActivity::class.java)
             context.startActivity(nextIntent)
-        }
-
-        holder.itemView.setOnClickListener {
-            val builder = AlertDialog.Builder(context)
-            //diaog
         }
     }
 
