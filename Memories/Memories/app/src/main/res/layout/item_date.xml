@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@android:color/holo_red_dark"
-    android:padding="3dp"
+    android:background="@android:color/holo_blue_light"
+    android:layout_height="100dp"
+    android:padding="5dp"
+    android:layout_margin="2dp"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <ImageView
@@ -14,9 +15,9 @@
         android:text="13일"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/date_title"/>
+        android:id="@+id/date_date"/>
     <TextView
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/date_title"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -25,5 +26,5 @@
         android:textStyle="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/date_date"/>
+        android:id="@+id/date_title"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

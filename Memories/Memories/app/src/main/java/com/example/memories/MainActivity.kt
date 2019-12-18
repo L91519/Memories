@@ -3,6 +3,7 @@ package com.example.memories
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -20,7 +21,7 @@ class MainActivity : AppCompatActivity() {
         val adapter = CalendarReyclerViewAdapter(calendarList)
         calendatRecyclerView.adapter = adapter
 
-        val lm = LinearLayoutManager(this)
+        val lm = StaggeredGridLayoutManager(7, StaggeredGridLayoutManager.VERTICAL)
         calendatRecyclerView.layoutManager = lm
         calendatRecyclerView.setHasFixedSize(true)
     }
