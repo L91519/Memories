@@ -6,5 +6,3 @@ Diary that includes picture and people can emphasize with your story.
 
 + Kotlin based application
 + Server : Retrofit
-
-#### 
