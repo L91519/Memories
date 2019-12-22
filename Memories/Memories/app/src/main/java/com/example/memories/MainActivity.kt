@@ -17,13 +17,16 @@ class MainActivity : AppCompatActivity() {
         //todo : if user is not keeped logged in, go to login page or sign in page
 
         initCalendarList()
-
+        /*          Calendar Recyclerview
         val adapter = CalendarReyclerViewAdapter(calendarList)
         calendatRecyclerView.adapter = adapter
 
         val lm = StaggeredGridLayoutManager(7, StaggeredGridLayoutManager.VERTICAL)
         calendatRecyclerView.layoutManager = lm
         calendatRecyclerView.setHasFixedSize(true)
+*/
+
+
     }
 
     fun initCalendarList()
