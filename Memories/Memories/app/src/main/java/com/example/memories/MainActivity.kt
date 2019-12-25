@@ -4,11 +4,11 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
+import com.prolificinteractive.materialcalendarview.MaterialCalendarView
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
-    val calendarList = ArrayList<Date>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -16,7 +16,8 @@ class MainActivity : AppCompatActivity() {
 
         //todo : if user is not keeped logged in, go to login page or sign in page
 
-        initCalendarList()
+        materialCalendarView.setTopbarVisible(false)
+
         /*          Calendar Recyclerview
         val adapter = CalendarReyclerViewAdapter(calendarList)
         calendatRecyclerView.adapter = adapter
@@ -24,12 +25,12 @@ class MainActivity : AppCompatActivity() {
         val lm = StaggeredGridLayoutManager(7, StaggeredGridLayoutManager.VERTICAL)
         calendatRecyclerView.layoutManager = lm
         calendatRecyclerView.setHasFixedSize(true)
-*/
+        */
 
 
     }
 
-    fun initCalendarList()
+    fun initCalendarList(calendarList : ArrayList<Date>)
     {
         for (i in 0 until 34)
         {

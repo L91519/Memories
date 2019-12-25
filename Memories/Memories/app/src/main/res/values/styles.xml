@@ -7,4 +7,12 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
+
+    <style name="CalendarDays" parent="Widget.AppCompat.AutoCompleteTextView">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="CalendarDates" parent="Widget.AppCompat.AutoCompleteTextView">
+
+    </style>
 </resources>
