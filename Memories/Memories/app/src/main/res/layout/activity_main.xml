@@ -31,6 +31,56 @@
             app:layout_constraintTop_toBottomOf="@id/main_month"
             app:layout_constraintBottom_toBottomOf="parent">
 
+            <TextView
+                android:id="@+id/main_sun"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="일"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+            <TextView
+                android:id="@+id/main_mon"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="월"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toRightOf="@id/main_sun"/>
+            <TextView
+                android:id="@+id/main_tue"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="화"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toRightOf="main_mon"/>
+            <TextView
+                android:id="@+id/main_wed"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="수"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toRightOf="@+id/main_tue"/>
+            <TextView
+                android:id="@+id/main_thur"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="목"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toRightOf="@+id/main_wed"/>
+            <TextView
+                android:id="@+id/main_fri"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="금"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toRightOf="@+id/main_thur"/>
+            <TextView
+                android:id="@+id/main_sat"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="토"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toRightOf="@+id/main_fri"
+                app:layout_constraintRight_toRightOf="parent"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 
