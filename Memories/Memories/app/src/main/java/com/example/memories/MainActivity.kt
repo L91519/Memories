@@ -9,7 +9,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
-
+    val decorator = EventDecorator()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
         //todo : if user is not keeped logged in, go to login page or sign in page
 
         materialCalendarView.setTopbarVisible(false)
-
+        materialCalendarView.addDecorator(decorator)
         /*          Calendar Recyclerview
         val adapter = CalendarReyclerViewAdapter(calendarList)
         calendatRecyclerView.adapter = adapter
