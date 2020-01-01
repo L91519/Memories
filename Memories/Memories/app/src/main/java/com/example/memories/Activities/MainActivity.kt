@@ -1,11 +1,10 @@
-package com.example.memories
+package com.example.memories.Activities
 
-import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.StaggeredGridLayoutManager
-import com.prolificinteractive.materialcalendarview.MaterialCalendarView
+import com.example.memories.Models.Date
+import com.example.memories.EventDecorator
+import com.example.memories.R
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -41,7 +40,9 @@ class MainActivity : AppCompatActivity() {
         {
             if(i > 2 && i < 33)
             {
-                calendarList.add(i, Date((i - 2).toString(), "title" + i, 1))
+                calendarList.add(i,
+                    Date((i - 2).toString(), "title" + i, 1)
+                )
             }
             else
             {

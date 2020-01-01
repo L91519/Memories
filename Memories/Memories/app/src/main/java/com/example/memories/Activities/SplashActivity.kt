@@ -1,9 +1,10 @@
-package com.example.memories
+package com.example.memories.Activities
 
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity
+import com.example.memories.R
 
 class SplashActivity : AppCompatActivity(){
 
