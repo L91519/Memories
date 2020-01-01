@@ -1,5 +1,6 @@
 package com.example.memories
 
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -9,15 +10,19 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
-    val decorator = EventDecorator()
+    var decorator : EventDecorator? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         //todo : if user is not keeped logged in, go to login page or sign in page
 
+        decorator = EventDecorator(applicationContext)
+
         materialCalendarView.setTopbarVisible(false)
         materialCalendarView.addDecorator(decorator)
+
         /*          Calendar Recyclerview
         val adapter = CalendarReyclerViewAdapter(calendarList)
         calendatRecyclerView.adapter = adapter
