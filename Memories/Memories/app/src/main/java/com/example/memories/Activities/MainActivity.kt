@@ -9,7 +9,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
-    var decorator : EventDecorator? = null
+    var decorator: EventDecorator? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,18 +34,14 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    fun initCalendarList(calendarList : ArrayList<Date>)
-    {
-        for (i in 0 until 34)
-        {
-            if(i > 2 && i < 33)
-            {
-                calendarList.add(i,
+    fun initCalendarList(calendarList: ArrayList<Date>) {
+        for (i in 0 until 34) {
+            if (i > 2 && i < 33) {
+                calendarList.add(
+                    i,
                     Date((i - 2).toString(), "title" + i, 1)
                 )
-            }
-            else
-            {
+            } else {
                 calendarList.add(i, Date("0", "title0", 0))
             }
         }
