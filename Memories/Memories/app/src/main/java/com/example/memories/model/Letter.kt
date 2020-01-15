@@ -1,4 +1,4 @@
-package com.example.memories.Models
+package com.example.memories.model
 
 data class Letter(val letter: Char) {
 }

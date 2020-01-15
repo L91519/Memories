@@ -1,4 +1,4 @@
-package com.example.memories.Activities
+package com.example.memories.ui
 
 import android.content.Intent
 import android.os.Bundle
@@ -16,7 +16,8 @@ class SplashActivity : AppCompatActivity(){
 
         Handler().postDelayed({
             //어떤 액티비티로 넘어 갈지 설정 - 당연히 메인액티비로 넘어 가면 된다.
-            startActivity(Intent(this, MainActivity::class.java))
+//            startActivity(Intent(this, MainActivity::class.java))
+            startActivity(Intent(this, DiaryActivity::class.java))
             finish()
         }, SPLASH_TIME_OUT)
 

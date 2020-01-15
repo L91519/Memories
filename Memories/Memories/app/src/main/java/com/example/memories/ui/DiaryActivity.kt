@@ -1,15 +1,19 @@
-package com.example.memories.Activities
+package com.example.memories.ui
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.memories.Adapters.DiaryRecyclerViewAdapter
-import com.example.memories.Models.Letter
+import com.example.memories.model.Letter
 import com.example.memories.R
 import kotlinx.android.synthetic.main.activity_diary.*
 
 class DiaryActivity : AppCompatActivity() {
 
-    val adapter = DiaryRecyclerViewAdapter()
+    val adapter = DiaryRecyclerViewAdapter() {
+
+    }
+
+    val text = arrayOfNulls<Char>(180)
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_diary)
@@ -19,11 +23,16 @@ class DiaryActivity : AppCompatActivity() {
         initData(getString(R.string.dummy_string))
     }
 
-    fun initData(text: String) {
-        val datas = ArrayList<Letter>()
-        for(i in text){
-            datas.add(Letter(i))
+    fun initData(value: String) {
+        var tmpNum = 0;
+        val datas = mutableListOf<Letter>()
+        for (i in value) {
+            text.set(tmpNum, i)
+            tmpNum++
         }
-        adapter.setItems(datas)
+        for (i in text) {
+            datas.add(Letter(i?:' '))
+        }
+        adapter.setItems(datas as ArrayList<Letter>)
     }
 }
